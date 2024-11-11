@@ -1,8 +1,6 @@
 networks:
   default:
-    driver: bridge
-  gateway-network:
-    external: true
+    driver: bridge 
 
 services: 
   personalaccount.db:
@@ -30,7 +28,6 @@ services:
       - CONNECTION_STRING=Host=personalaccount.db;Database=BaimAgile;Username=postgres;Password=admin;Port=5432;
     networks:
       - default
-      - gateway-network
     ports:
       - "8083:8080"
     depends_on:
